@@ -22,22 +22,22 @@ Add your AWS credentials to you .env file:
 
 Add the VerifiesSMSCode trait to your User model (or any other model on which you might want to enable 2FA);
 
-#Send an SMS by setting the SMS verification number attribute:
+## Send an SMS by setting the SMS verification number attribute:
     $model->setSMSVerificationNumber($number);
 
-#For simple verification you can use:
+## For simple verification you can use:
     $model->verifySMSCode($request->get('code'));
 
-#Setting SMS verification attempt limits
+## Setting SMS verification attempt limits
     protected $sms_verification_attempt_limit = 5;
 
-#Setting SMS verification code type ('number', or 'string')
+## Setting SMS verification code type ('number', or 'string')
     protected $sms_verification_code_type = 'number';
 
-#Setting SMS verification code length
+## Setting SMS verification code length
     protected $sms_verification_code_length = 4;
 
-#Setting SMS verification sms type
+## Setting SMS verification sms type
     protected $sms_verification_sms_type = "Transactional";
 
 Changing the SMS message being sent
