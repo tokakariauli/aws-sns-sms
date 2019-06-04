@@ -1,0 +1,28 @@
+{
+    "name": "contract-zero/aws-sns-sms-verification",
+    "description": "Library for sending out and verifying SMS codes using AWS SNS",
+    "keywords": ["laravel", "sms", "verification", "aws", "sns"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tornike Kariauli",
+            "email": "tornikekariauli@contractzero.com"
+        }
+    ],
+    "require": {
+        "aws/aws-sdk-php": "^3.62"
+    },
+    "autoload": {
+        "psr-4": {
+            "ContractZero\\SMSVerification\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ContractZero\\SMSVerification\\SMSVerificationServiceProvider"
+            ]
+        }
+    }
+}
